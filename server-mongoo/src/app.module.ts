@@ -4,6 +4,7 @@ import { QuizController } from './controllers/quiz/quiz.controller';
 import { QuizService } from './services/quiz/quiz.service';
 import { Quiz, QuizSchema } from './models/schema/quiz.schema';
 import { Question, QuestionSchema } from './models/schema/question.schema';
+import { ChatGateway } from './gateway/chat.gateway';
 
 @Module({
   imports: [
@@ -16,6 +17,6 @@ import { Question, QuestionSchema } from './models/schema/question.schema';
     ]),
   ],
   controllers: [QuizController],
-  providers: [QuizService],
+  providers: [QuizService, ChatGateway],
 })
 export class AppModule {}

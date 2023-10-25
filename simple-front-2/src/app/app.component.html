@@ -1,0 +1,10 @@
+<div>
+  Nombre utilisateurs : {{ users }}
+</div>
+<div>
+  <ul>
+    <li *ngFor="let message of messages">{{ message }}</li>
+  </ul>
+  <input [(ngModel)]="newMessage" (keyup.enter)="addChat()" placeholder="Saisissez votre message" />
+  <button (click)="addChat()">Envoyer</button>
+</div>
